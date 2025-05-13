@@ -6,33 +6,46 @@ class ProjectsSection extends StatelessWidget {
 
   final List<Map<String, String>> projects = const [
     {
-      'title': 'Chat App',
+      'title': 'E-chat',
       'description': 'A real-time Flutter chat app using Firebase.',
-      'image': 'assets/images/chatting.png', // sample image path
+      'image': 'assets/images/echat.jpg',
       'link': 'https://github.com/KarimAbushbak/Chatting-App',
     },
     {
-      'title': 'Note App',
-      'description': 'A cool NotePad App using Flutter and firebase.',
-      'image': 'assets/images/note.png',
+      'title': 'Big Cart ',
+      'description':
+          'BigCart is a Flutter-based grocery shopping app .',
+      'image': 'assets/images/bigcart.jpg',
       'link': 'https://github.com/KarimAbushbak/note-firebase',
     },
     {
-      'title': 'E-Commerce App',
+      'title': 'Al-saray',
       'description': 'Full e-commerce Flutter app with payment gateway.',
-      'image': 'assets/images/ggg.png',
+      'image': 'assets/images/alsaray.jpg',
       'link': 'https://github.com/KarimAbushbak/advanced_Ecommerse',
     },
     {
-      'title': 'Quizie',
-      'description': 'A programming quiz app using Bloc and Supbase.',
-      'image': 'assets/images/quiz.png',
+      'title': 'Kabar',
+      'description': 'Kabar is a news app using flutter and api .',
+      'image': 'assets/images/kabar.jpg',
       'link': 'https://github.com/KarimAbushbak/Quiz-App',
     },
     {
+      'title': 'Pet Lover Center',
+      'description': 'Pet Lovers Centre is a Flutter app with 60+ screens for managing pet profiles, shopping, and events',
+      'image': 'assets/images/petLover.jpg',
+      'link': 'https://github.com/KarimAbushbak/news-app',
+    },
+    {
+      'title': 'Mindly',
+      'description': 'Mindly is a Flutter educational app with 35+ screens, offering interactive lessons and personalized learning paths ',
+      'image': 'assets/images/Mindly2.jpg',
+      'link': 'https://github.com/KarimAbushbak/news-app',
+    },
+    {
       'title': 'News',
-      'description': 'A full real-time News app using  Flutter and api ',
-      'image': 'assets/images/news.png',
+      'description': 'CabGo is a Flutter-based taxi app with 50+ screens, featuring a fast booking process, secure login, and a sleek, responsive UI.',
+      'image': 'assets/images/cabgo2.png',
       'link': 'https://github.com/KarimAbushbak/news-app',
     },
 
@@ -50,8 +63,8 @@ class ProjectsSection extends StatelessWidget {
           Text(
             'Projects',
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-              fontWeight: FontWeight.bold,
-            ),
+                  fontWeight: FontWeight.bold,
+                ),
           ),
           const SizedBox(height: 20),
           Wrap(
@@ -97,12 +110,12 @@ class ProjectCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ClipRRect(
-              borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+              borderRadius:
+                  const BorderRadius.vertical(top: Radius.circular(12)),
               child: Image.asset(
                 imagePath,
-                height: 150,
+                height: 185,
                 width: double.infinity,
-                fit: BoxFit.cover,
               ),
             ),
             Padding(
@@ -111,7 +124,10 @@ class ProjectCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(title,
-                      style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                      style: Theme.of(context)
+                          .textTheme
+                          .titleMedium
+                          ?.copyWith(fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
                   Text(
                     description,
@@ -122,7 +138,8 @@ class ProjectCard extends StatelessWidget {
                     onPressed: () async {
                       final uri = Uri.parse(link);
                       if (await canLaunchUrl(uri)) {
-                        await launchUrl(uri, mode: LaunchMode.externalApplication);
+                        await launchUrl(uri,
+                            mode: LaunchMode.externalApplication);
                       } else {
                         // You could show a snackbar or error
                         print('Could not launch $link');

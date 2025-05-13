@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
               key: contactsKey,
             ),
             const SizedBox(height: 50),
-            const SocialMediaRow(), // ✅ Add this
+            const SocialMediaRow(), 
             const SizedBox(height: 50),
 
           ],
